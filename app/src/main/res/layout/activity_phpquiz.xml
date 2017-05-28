@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="1"
+    tools:context="com.example.fajar.learnyourself.PHPQuiz">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:text="Question"
+        android:textColor="#212121"
+        android:textSize="20sp" />
+
+    <Button
+        android:background="#C8E6C9"
+        android:id="@+id/choice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="A"
+        android:textColor="#212121"
+        android:onClick="onclick"
+        android:padding="8dp" />
+
+    <Button
+        android:background="#C8E6C9"
+        android:id="@+id/choice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="B"
+        android:textColor="#212121"
+        android:onClick="onclick"
+        android:padding="8dp" />
+
+    <Button
+        android:background="#C8E6C9"
+        android:id="@+id/choice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="C"
+        android:textColor="#212121"
+        android:onClick="onclick"
+        android:padding="8dp" />
+
+</LinearLayout>

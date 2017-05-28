@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.fajar.learnyourself.Welcome">
+
+    <EditText
+        android:hint="Input your name"
+        android:id="@+id/nameedittxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#212121"
+        android:textSize="20sp"/>
+
+    <Button
+        android:background="#C8E6C9"
+        android:id="@+id/submitbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nameedittxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="submitbtn"
+        android:text="SUBMIT"
+        android:textColor="#212121"/>
+
+</RelativeLayout>

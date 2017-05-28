@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fajar.learnyourself.Menu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:background="@drawable/java"
+            android:id="@+id/javaimgbtn"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:onClick="javaimgbtn" />
+        
+        <TextView
+            android:background="#2E7D32"
+            android:gravity="center_horizontal"
+            android:id="@+id/javatxt"
+            android:layout_below="@+id/javaimgbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="javaimgbtn"
+            android:text="JAVA PROGRAMMING"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:background="@drawable/php"
+            android:id="@+id/phpimgbtn"
+            android:layout_below="@+id/javatxt"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:onClick="phpimgbtn" />
+
+        <TextView
+            android:background="#2E7D32"
+            android:gravity="center_horizontal"
+            android:id="@+id/phptxt"
+            android:layout_below="@+id/phpimgbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="phpimgbtn"
+            android:text="PHP PROGRAMMING"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:background="@drawable/python"
+            android:id="@+id/pythonimgbtn"
+            android:layout_below="@+id/phptxt"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:onClick="pythonimgbtn" />
+
+        <TextView
+            android:background="#2E7D32"
+            android:gravity="center_horizontal"
+            android:id="@+id/pythontxt"
+            android:layout_below="@+id/pythonimgbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pythonimgbtn"
+            android:text="PYTHON PROGRAMMING"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:background="@drawable/sql"
+            android:id="@+id/sqlimgbtn"
+            android:layout_below="@+id/pythontxt"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:onClick="sqlimgbtn" />
+
+        <TextView
+            android:background="#2E7D32"
+            android:gravity="center_horizontal"
+            android:id="@+id/sqltxt"
+            android:layout_below="@+id/sqlimgbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sqlimgbtn"
+            android:text="SQL PROGRAMMING"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fajar.learnyourself.JavaActivity">
+
+    <TextView
+        android:id="@+id/javatitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="Welcome to Java"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/javaintro"
+        android:layout_below="@+id/javatitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="Java is high level, modern programming language designed in the early 1990s by Sun Microsystems and currently owned by Oracle. Java is Platforms Independent, which means that you only need to write the program once to."
+        android:textColor="#212121"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/javacontent"
+        android:layout_below="@+id/javaintro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="More than 3 billion devices run Java. Java is used to develop apps for Google's Android OS, various Desktop Applications, such as media players, antivirus programs, Web Applications, Enterprise Applications (i.e banking) and many more!"
+        android:textColor="#212121"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/javacontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/quizbtn"
+            android:background="#C8E6C9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:onClick="quizbtn"
+            android:text="QUIZ"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/menubtn"
+            android:background="#C8E6C9"
+            android:layout_below="@+id/quizbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:onClick="menubtn"
+            android:text="Menu"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
