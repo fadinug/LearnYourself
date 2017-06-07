@@ -1,27 +1,27 @@
-package com.example.fajar.learnyourself;
+package com.example.fajar.learnyourself.QuizBank;
 
 /**
  * Created by Fajar on 5/18/2017.
  */
 
-public class PythonQuizBank {
+public class SQLQuizBank {
 
     //array untuk pertanyaan
     private String squestion [] = {
-            "Python is a ... ",
-            "Which of these statements is true?"
+            "Which of the following is NOT true about a database?",
+            "Tables are made up of ..."
     };
 
     //array untuk opsi
     private String schoice [][] = {
-            {"Development environment", "Set of editing tools", "Programming language"},
-            {"Python code must be always compiled", "CPython is an implementation of Python", "Python 1.7 is the most widely used version"}
+            {"A database is a collection of data", "A database is made up of 'tables'", "A database is a programming language"},
+            {"Columns and rows", "Columns only", "Rows, but no columns"}
     };
 
     //array untuk jawaban yang benar
     private String scorrect [] = {
-            "Programming language",
-            "CPython is an implementation of Python"
+            "A database is a programming language",
+            "Columns and rows"
     };
 
     //method untuk mengetahui berapa pertanyaan
@@ -46,4 +46,5 @@ public class PythonQuizBank {
         String correct = scorrect[a];
         return correct;
     }
+
 }

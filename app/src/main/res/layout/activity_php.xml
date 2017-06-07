@@ -1,87 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fajar.learnyourself.PHPActivity">
+    tools:context="com.example.fajar.learnyourself.Activity.PHPActivity">
 
-    <TextView
-        android:id="@+id/phptitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="Welcome to PHP"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/phpintro"
-        android:layout_below="@+id/phptitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="PHP: Hypertext Preprocessor (PHP) is a free, highly popular, open source scripting language. PHP scripts are executed on the server.
-Just a short list of what PHP is capable of:
-- Generating dynamic page content
-- Creating, opening, reading, writing, deleting, and closing files on the server
-- Collecting form data
-- Adding, deleting, and modifying information stored in your database
-- controlling user-access
-- encrypting data
-- and much more!"
-        android:textColor="#212121"
-        android:textSize="14sp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_php"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
 
-    <TextView
-        android:id="@+id/phpcontent"
-        android:layout_below="@+id/phpintro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="PHP runs on numerous, varying platforms, including Windows, Linux, Unix, Mac OS X, and so on. PHP is compatible with almost any modern server, such as Apache, IIS, and more. PHP supports a wide range of databases. PHP is free!"
-        android:textColor="#212121"
-        android:textSize="14sp" />
+        </android.support.v7.widget.RecyclerView>
 
-    <LinearLayout
-        android:gravity="center_horizontal"
-        android:layout_below="@+id/phpcontent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/quizbtn"
-            android:background="#C8E6C9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="10dp"
-            android:onClick="quizbtn"
-            android:text="QUIZ"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/menubtn"
-            android:background="#C8E6C9"
-            android:layout_below="@+id/quizbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="10dp"
-            android:onClick="menubtn"
-            android:text="Menu"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

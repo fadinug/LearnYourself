@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.fajar.learnyourself.Activity.JavaActivity;
+import com.example.fajar.learnyourself.Activity.PHPActivity;
+import com.example.fajar.learnyourself.Activity.PythonActivity;
+import com.example.fajar.learnyourself.Activity.SQLActivity;
+
 public class Menu extends AppCompatActivity {
 
     @Override

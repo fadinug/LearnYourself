@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Menu" />
-        <activity android:name=".JavaActivity" />
-        <activity android:name=".PHPActivity" />
-        <activity android:name=".PythonActivity" />
-        <activity android:name=".SQLActivity" />
-        <activity android:name=".JavaQuiz" />
-        <activity android:name=".PHPQuiz" />
-        <activity android:name=".PythonQuiz" />
-        <activity android:name=".SQLQuiz" />
+        <activity android:name=".Activity.JavaActivity" />
+        <activity android:name=".Activity.PHPActivity" />
+        <activity android:name=".Activity.PythonActivity" />
+        <activity android:name=".Activity.SQLActivity" />
+        <activity android:name=".Quiz.JavaQuiz" />
+        <activity android:name=".Quiz.PHPQuiz" />
+        <activity android:name=".Quiz.PythonQuiz" />
+        <activity android:name=".Quiz.SQLQuiz" />
         <activity android:name=".Welcome" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

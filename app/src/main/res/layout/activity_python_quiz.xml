@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:weightSum="1"
-    tools:context="com.example.fajar.learnyourself.PythonQuiz">
+    tools:context="com.example.fajar.learnyourself.Quiz.PythonQuiz">
 
     <TextView
         android:id="@+id/question"

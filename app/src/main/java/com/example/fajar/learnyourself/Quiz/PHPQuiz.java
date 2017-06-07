@@ -1,4 +1,4 @@
-package com.example.fajar.learnyourself;
+package com.example.fajar.learnyourself.Quiz;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,10 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class PythonQuiz extends AppCompatActivity {
+import com.example.fajar.learnyourself.Menu;
+import com.example.fajar.learnyourself.QuizBank.PHPQuizBank;
+import com.example.fajar.learnyourself.R;
+
+public class PHPQuiz extends AppCompatActivity {
 
     //deklarasi variable
-    private PythonQuizBank mPythonQuizLibrary = new PythonQuizBank(); //buat wadah baru
+    private PHPQuizBank mPHPQuizLibrary = new PHPQuizBank(); //buat wadah baru
     private TextView sQuestion;
     private Button mChoice1;
     private Button mChoice2;
@@ -25,9 +29,9 @@ public class PythonQuiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_python_quiz);
+        setContentView(R.layout.activity_phpquiz);
 
-        setTitle("Quiz Python");
+        setTitle("Quiz PHP");
 
         //inisialisasi komponen di xml ke java
         sQuestion = (TextView) findViewById(R.id.question);
@@ -40,15 +44,15 @@ public class PythonQuiz extends AppCompatActivity {
 
     //method untuk update pertanyaan
     private void updateQuestion() {
-        if (mQuestionNumber < mPythonQuizLibrary.getLength()) {
-            sQuestion.setText(mPythonQuizLibrary.getSquestion(mQuestionNumber));
-            mChoice1.setText(mPythonQuizLibrary.getSchoice(mQuestionNumber, 1));
-            mChoice2.setText(mPythonQuizLibrary.getSchoice(mQuestionNumber, 2));
-            mChoice3.setText(mPythonQuizLibrary.getSchoice(mQuestionNumber, 3));
-            sAnswer = mPythonQuizLibrary.getScorrect(mQuestionNumber);
+        if (mQuestionNumber < mPHPQuizLibrary.getLength()) {
+            sQuestion.setText(mPHPQuizLibrary.getSquestion(mQuestionNumber));
+            mChoice1.setText(mPHPQuizLibrary.getSchoice(mQuestionNumber, 1));
+            mChoice2.setText(mPHPQuizLibrary.getSchoice(mQuestionNumber, 2));
+            mChoice3.setText(mPHPQuizLibrary.getSchoice(mQuestionNumber, 3));
+            sAnswer = mPHPQuizLibrary.getScorrect(mQuestionNumber);
             mQuestionNumber++;
         } else {
-            Toast.makeText(PythonQuiz.this, "This is last question", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PHPQuiz.this, "This is last question", Toast.LENGTH_SHORT).show();
             lastquestion();
         }
     }
@@ -57,20 +61,20 @@ public class PythonQuiz extends AppCompatActivity {
     public void onclick (View view) {
         Button answer = (Button) view;
         if (answer.getText() == sAnswer) {
-            Toast.makeText(PythonQuiz.this, "Correct Answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PHPQuiz.this, "Correct Answer!", Toast.LENGTH_SHORT).show();
         } else
-            Toast.makeText(PythonQuiz.this, "Incorrect Answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PHPQuiz.this, "Incorrect Answer!", Toast.LENGTH_SHORT).show();
         updateQuestion();
     }
 
     //method ketika pertanyaan terakhir sudah dijawab
     public void lastquestion() {
-        new AlertDialog.Builder(PythonQuiz.this).setTitle("Go to Home")
+        new AlertDialog.Builder(PHPQuiz.this).setTitle("Go to Home")
                 .setMessage("Do you want to go Home Activity?").setNegativeButton(android.R.string.no, null) // dismisses by default
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent home = new Intent(PythonQuiz.this, Menu.class);
+                        Intent home = new Intent(PHPQuiz.this, Menu.class);
                         startActivity(home);
                         finish();
                     }

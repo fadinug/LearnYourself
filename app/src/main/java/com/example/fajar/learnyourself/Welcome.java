@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.fajar.learnyourself.Activity.MainActivity;
+
 public class Welcome extends AppCompatActivity {
 
     //deklarasi variable

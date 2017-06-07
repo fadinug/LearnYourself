@@ -1,79 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fajar.learnyourself.PythonActivity">
+    tools:context="com.example.fajar.learnyourself.Activity.PythonActivity">
 
-    <TextView
-        android:id="@+id/pythontitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="Welcome to Python"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/pythonintro"
-        android:layout_below="@+id/pythontitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="Python is a high-level programming language, with applications in numerous areas, including web programming, scripting, scientific computing, and artificial intelligence. It is very popular and used by organizations such as Google, NASA, the CIA, and Disney."
-        android:textColor="#212121"
-        android:textSize="14sp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_python"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
 
-    <TextView
-        android:id="@+id/pythoncontent"
-        android:layout_below="@+id/pythonintro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:text="The three major versions of Python are 1.x, 2.x and 3.x. These are subdivided into minor versions, such as 2.7 and 3.3. Code written for Python 3.x is guaranteed to work in all future versions. Both Python Version 2.x and 3.x are used currently. This course covers Python 3.x, but it isn't hard to change from one version to another. Python has several different implementations, written in various languages. The version used in this course, CPython, is the most popular by far."
-        android:textColor="#212121"
-        android:textSize="14sp" />
+        </android.support.v7.widget.RecyclerView>
 
-    <LinearLayout
-        android:gravity="center_horizontal"
-        android:layout_below="@+id/pythoncontent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/quizbtn"
-            android:background="#C8E6C9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
-            android:layout_marginTop="10dp"
-            android:onClick="quizbtn"
-            android:text="QUIZ"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/menubtn"
-            android:background="#C8E6C9"
-            android:layout_below="@+id/quizbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="10dp"
-            android:onClick="menubtn"
-            android:text="Menu"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

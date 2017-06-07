@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:weightSum="1"
-    tools:context="com.example.fajar.learnyourself.SQLQuiz">
+    tools:context="com.example.fajar.learnyourself.Quiz.SQLQuiz">
 
     <TextView
         android:id="@+id/question"

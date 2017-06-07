@@ -1,4 +1,4 @@
-package com.example.fajar.learnyourself;
+package com.example.fajar.learnyourself.QuizBank;
 
     /**
      * Created by Fajar on 5/18/2017.

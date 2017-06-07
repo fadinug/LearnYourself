@@ -1,4 +1,4 @@
-package com.example.fajar.learnyourself;
+package com.example.fajar.learnyourself.Quiz;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,10 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SQLQuiz extends AppCompatActivity {
+import com.example.fajar.learnyourself.Menu;
+import com.example.fajar.learnyourself.QuizBank.JavaQuizBank;
+import com.example.fajar.learnyourself.R;
+
+public class JavaQuiz extends AppCompatActivity {
 
     //deklarasi variable
-    private SQLQuizBank mSQLQuizLibrary = new SQLQuizBank(); //buat wadah baru
+    private JavaQuizBank mJavaQuizLibrary = new JavaQuizBank(); //buat wadah baru
     private TextView sQuestion;
     private Button mChoice1;
     private Button mChoice2;
@@ -25,9 +29,9 @@ public class SQLQuiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sqlquiz);
+        setContentView(R.layout.activity_java_quiz);
 
-        setTitle("Quiz SQL");
+        setTitle("Quiz Java");
 
         //inisialisasi komponen di xml ke java
         sQuestion = (TextView) findViewById(R.id.question);
@@ -40,15 +44,15 @@ public class SQLQuiz extends AppCompatActivity {
 
     //method untuk update pertanyaan
     private void updateQuestion() {
-        if (mQuestionNumber < mSQLQuizLibrary.getLength()) {
-            sQuestion.setText(mSQLQuizLibrary.getSquestion(mQuestionNumber));
-            mChoice1.setText(mSQLQuizLibrary.getSchoice(mQuestionNumber, 1));
-            mChoice2.setText(mSQLQuizLibrary.getSchoice(mQuestionNumber, 2));
-            mChoice3.setText(mSQLQuizLibrary.getSchoice(mQuestionNumber, 3));
-            sAnswer = mSQLQuizLibrary.getScorrect(mQuestionNumber);
+        if (mQuestionNumber < mJavaQuizLibrary.getLength()) {
+            sQuestion.setText(mJavaQuizLibrary.getSquestion(mQuestionNumber));
+            mChoice1.setText(mJavaQuizLibrary.getSchoice(mQuestionNumber, 1));
+            mChoice2.setText(mJavaQuizLibrary.getSchoice(mQuestionNumber, 2));
+            mChoice3.setText(mJavaQuizLibrary.getSchoice(mQuestionNumber, 3));
+            sAnswer = mJavaQuizLibrary.getScorrect(mQuestionNumber);
             mQuestionNumber++;
         } else {
-            Toast.makeText(SQLQuiz.this, "This is last question", Toast.LENGTH_SHORT).show();
+            Toast.makeText(JavaQuiz.this, "This is last question", Toast.LENGTH_SHORT).show();
             lastquestion();
         }
     }
@@ -57,20 +61,20 @@ public class SQLQuiz extends AppCompatActivity {
     public void onclick (View view) {
         Button answer = (Button) view;
         if (answer.getText() == sAnswer) {
-            Toast.makeText(SQLQuiz.this, "Correct Answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(JavaQuiz.this, "Correct Answer!", Toast.LENGTH_SHORT).show();
         } else
-            Toast.makeText(SQLQuiz.this, "Incorrect Answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(JavaQuiz.this, "Incorrect Answer!", Toast.LENGTH_SHORT).show();
         updateQuestion();
     }
 
     //method ketika pertanyaan terakhir sudah dijawab
     public void lastquestion() {
-        new AlertDialog.Builder(SQLQuiz.this).setTitle("Go to Home")
+        new AlertDialog.Builder(JavaQuiz.this).setTitle("Go to Home")
                 .setMessage("Do you want to go Home Activity?").setNegativeButton(android.R.string.no, null) // dismisses by default
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent home = new Intent(SQLQuiz.this, Menu.class);
+                        Intent home = new Intent(JavaQuiz.this, Menu.class);
                         startActivity(home);
                         finish();
                     }
